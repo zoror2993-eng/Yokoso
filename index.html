@@ -1,0 +1,69 @@
+       
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spin Wheel</title>
+<style>
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  .wheel-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  .wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid #333;
+    box-sizing: border-box;
+    background: conic-gradient(
+      #4caf50 0deg 180deg, /* Green half */
+      #f44336 180deg 360deg /* Red half */
+    );
+    transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  .wheel-text {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  .text-hambe {
+    position: absolute;
+    top: 20%;
+    left: 12.5%;
+    transform: rotate(-45deg);
+    color: white;
+  }
+  .text-na {
+    position: absolute;
+    top: 20%;
+    right: 12.5%;
+    transform: rotate(135deg);
+    color: white;
+  }
+  .center-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; 
